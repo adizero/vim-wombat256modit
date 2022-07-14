@@ -112,4 +112,9 @@ hi! link SignColumn 	Folded
 " highlighting non-text with LineNr (black background does not always look good, disabled for now)
 " hi! link NonText		LineNr
 
+hi GitSignsAdd		ctermfg=17		ctermbg=237		cterm=none  guifg=#2a0d6a guibg=#3a4046 gui=none
+hi GitSignsAddNr    ctermfg=19		ctermbg=232		cterm=none  guifg=#3a1d7a guibg=#080808 gui=none
+hi GitSignsDelete		ctermfg=60		ctermbg=237		cterm=none  guifg=#3e3969 guibg=#3a4046 gui=none
+hi GitSignsDeleteNr		ctermfg=62		ctermbg=237		cterm=none  guifg=#4e4979 guibg=#080808 gui=none
+
 " vim:set ts=4 sw=4 noet:
