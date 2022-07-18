@@ -68,10 +68,10 @@ hi DiffChange                   ctermbg=237                                     
 "hi Question
 "hi Scrollbar
 "hi SignColumn
-"hi SpellBad
-"hi SpellCap
-highlight SpellLocal ctermfg=252 ctermbg=31 cterm=none gui=undercurl guisp=Cyan
-"hi SpellRare
+hi SpellBad ctermbg=none cterm=undercurl gui=undercurl
+hi SpellCap ctermbg=none cterm=undercurl gui=undercurl
+hi SpellRare ctermbg=none cterm=undercurl gui=undercurl
+hi SpellLocal ctermbg=none cterm=undercurl gui=undercurl guisp=Cyan
 "hi TabLine
 "hi TabLineFill
 "hi TabLineSel
@@ -109,12 +109,30 @@ endif
 hi! link FoldColumn     Folded
 hi! link CursorColumn   CursorLine
 hi! link SignColumn     Folded
+hi! link VertSplit      StatusLineNC
+hi! link FloatBorder    StatusLineNC
+" hi NormalNC       ctermfg=241 ctermbg=233 guifg=#c8c093 guibg=#181820
+hi NormalNC       ctermfg=252 ctermbg=233 guifg=#e3e0d7 guibg=#181820
+hi WinSeparator   ctermfg=241 ctermbg=233 guifg=#363646 guibg=#181820
+
 " highlighting non-text with LineNr (black background does not always look good, disabled for now)
 " hi! link NonText      LineNr
 
 hi GitSignsAdd      ctermfg=17      ctermbg=237     cterm=none  guifg=#2a0d6a guibg=#3a4046 gui=none
 hi GitSignsAddNr    ctermfg=19      ctermbg=232     cterm=none  guifg=#3a1d7a guibg=#080808 gui=none
 hi GitSignsDelete       ctermfg=60      ctermbg=237     cterm=none  guifg=#3e3969 guibg=#3a4046 gui=none
-hi GitSignsDeleteNr     ctermfg=62      ctermbg=237     cterm=none  guifg=#4e4979 guibg=#080808 gui=none
+hi GitSignsDeleteNr     ctermfg=62      ctermbg=232     cterm=none  guifg=#4e4979 guibg=#080808 gui=none
+hi GitSignsChange       ctermbg=237     cterm=none  guibg=#3a4046 gui=none
+hi GitSignsChangeNr     ctermbg=232     cterm=none  guibg=#080808 gui=none
+
+hi DiagnosticUnderlineError cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineWarn  cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineInfo  cterm=undercurl gui=undercurl
+hi DiagnosticUnderlineHint  cterm=undercurl gui=undercurl
+
+hi DiagnosticSignError ctermfg=1 ctermbg=237 guifg=Red       guibg=#3a4046
+hi DiagnosticSignWarn  ctermfg=3 ctermbg=237 guifg=Orange    guibg=#3a4046
+hi DiagnosticSignInfo  ctermfg=4 ctermbg=237 guifg=LightBlue guibg=#3a4046
+hi DiagnosticSignHint  ctermfg=7 ctermbg=237 guifg=LightGrey guibg=#3a4046
 
 " vim:set ts=4 sw=4
