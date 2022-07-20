@@ -137,13 +137,21 @@ hi DiagnosticSignInfo  ctermfg=4 ctermbg=237 guifg=LightBlue guibg=#3a4046
 hi DiagnosticSignHint  ctermfg=7 ctermbg=237 guifg=LightGrey guibg=#3a4046
 
 if !has('nvim')
-    " Vim will not use color underscores unless termguicolors is enabled (results in "commented out" color
+    hi SpellBad cterm=undercurl gui=undercurl
+    hi SpellCap cterm=undercurl gui=undercurl
+    hi SpellRare cterm=undercurl gui=undercurl
+    hi SpellLocal cterm=undercurl gui=undercurl guisp=Cyan
+    " Vim will not use colored undercurls unless termguicolors is enabled (results in "commented out" color
     " of undercurls and no difference between spelling/diagnostic errors)
     " Change the foreground text color for these categories (will have text + undercurl using the same color)
-    hi SpellBad ctermfg=9 ctermbg=none cterm=undercurl gui=undercurl
-    hi SpellCap ctermfg=12 ctermbg=none cterm=undercurl gui=undercurl
-    hi SpellRare ctermfg=13 ctermbg=none cterm=undercurl gui=undercurl
-    hi SpellLocal ctermfg=252 ctermbg=none cterm=undercurl gui=undercurl guisp=Cyan
+    " Only if not using 'termguicolors' option
+    " Vim always uses cterm colors even in termguicolors mode (Neovim uses gui colors when termguicolors is set)
+    if (v:version > 704 || (v:version == 704 && has('patch1799'))) && &termguicolors == 0
+        hi SpellBad ctermfg=9 ctermbg=none
+        hi SpellCap ctermfg=12 ctermbg=none
+        hi SpellRare ctermfg=13 ctermbg=none
+        hi SpellLocal ctermfg=252 ctermbg=none
+    endif
 endif
 
 " vim:set ts=4 sw=4
