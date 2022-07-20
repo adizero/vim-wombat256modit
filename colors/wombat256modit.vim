@@ -1,7 +1,9 @@
 " Vim color file
 " Original Maintainer:  Lars H. Nielsen (dengmao@gmail.com)
-" Last Change:  2022-07-14
+" Last Change:  2022-07-20
 "
+" Added undercurls for spelling and diagnostics, tweaked signcolumn colors
+"   Adrian Kocis <adrian.kocis@gmail.com>
 " Added italics, SpellLocal highlight color
 "   Adrian Kocis <adrian.kocis@gmail.com>
 " Modified version of wombat for 256-color terminals by
