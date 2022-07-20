@@ -119,11 +119,12 @@ hi WinSeparator   ctermfg=241 ctermbg=233 guifg=#363646 guibg=#181820
 " hi! link NonText      LineNr
 
 hi GitSignsAdd      ctermfg=17      ctermbg=237     cterm=none  guifg=#2a0d6a guibg=#3a4046 gui=none
-hi GitSignsAddNr    ctermfg=19      ctermbg=232     cterm=none  guifg=#3a1d7a guibg=#080808 gui=none
-hi GitSignsDelete       ctermfg=60      ctermbg=237     cterm=none  guifg=#3e3969 guibg=#3a4046 gui=none
-hi GitSignsDeleteNr     ctermfg=62      ctermbg=232     cterm=none  guifg=#4e4979 guibg=#080808 gui=none
+hi GitSignsAddNr    ctermfg=19      ctermbg=232     cterm=none  guifg=#3a1daa guibg=#080808 gui=none
+hi GitSignsDelete       ctermfg=167      ctermbg=237     cterm=none  guifg=#c34043 guibg=#3a4046 gui=none
+hi GitSignsDeleteNr     ctermfg=167      ctermbg=232     cterm=none  guifg=#c34043 guibg=#080808 gui=none
 hi GitSignsChange       ctermbg=237     cterm=none  guibg=#3a4046 gui=none
 hi GitSignsChangeNr     ctermbg=232     cterm=none  guibg=#080808 gui=none
+
 
 hi DiagnosticUnderlineError cterm=undercurl gui=undercurl
 hi DiagnosticUnderlineWarn  cterm=undercurl gui=undercurl
@@ -134,5 +135,15 @@ hi DiagnosticSignError ctermfg=1 ctermbg=237 guifg=Red       guibg=#3a4046
 hi DiagnosticSignWarn  ctermfg=3 ctermbg=237 guifg=Orange    guibg=#3a4046
 hi DiagnosticSignInfo  ctermfg=4 ctermbg=237 guifg=LightBlue guibg=#3a4046
 hi DiagnosticSignHint  ctermfg=7 ctermbg=237 guifg=LightGrey guibg=#3a4046
+
+if !has('nvim')
+    " Vim will not use color underscores unless termguicolors is enabled (results in "commented out" color
+    " of undercurls and no difference between spelling/diagnostic errors)
+    " Change the foreground text color for these categories (will have text + undercurl using the same color)
+    hi SpellBad ctermfg=9 ctermbg=none cterm=undercurl gui=undercurl
+    hi SpellCap ctermfg=12 ctermbg=none cterm=undercurl gui=undercurl
+    hi SpellRare ctermfg=13 ctermbg=none cterm=undercurl gui=undercurl
+    hi SpellLocal ctermfg=252 ctermbg=none cterm=undercurl gui=undercurl guisp=Cyan
+endif
 
 " vim:set ts=4 sw=4
