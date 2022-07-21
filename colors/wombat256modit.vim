@@ -35,6 +35,9 @@ hi Folded       ctermfg=103     ctermbg=237     cterm=none      guifg=#a0a8b0   
 hi Title        ctermfg=230                     cterm=bold      guifg=#ffffd7                   gui=bold
 if v:version >= 704
     hi StatusLine   ctermfg=230     ctermbg=238     cterm=italic    guifg=#ffffd7   guibg=#444444   gui=italic
+    hi TabLine     ctermfg=243 ctermbg=237 cterm=none guifg=#7c6f64 guibg=#3c3836 gui=none
+    hi TabLineSel  ctermfg=252 ctermbg=237 cterm=bold guifg=#e3e0d7 guibg=#3c3836 gui=bold
+    hi TabLineFill ctermfg=243 ctermbg=237 cterm=none guifg=#7c6f64 guibg=#3c3836 gui=none
 else
     hi StatusLine   ctermfg=230     ctermbg=238     cterm=none      guifg=#ffffd7   guibg=#444444   gui=italic
 endif
@@ -137,6 +140,8 @@ hi DiagnosticSignError ctermfg=1 ctermbg=237 guifg=Red       guibg=#3a4046
 hi DiagnosticSignWarn  ctermfg=3 ctermbg=237 guifg=Orange    guibg=#3a4046
 hi DiagnosticSignInfo  ctermfg=4 ctermbg=237 guifg=LightBlue guibg=#3a4046
 hi DiagnosticSignHint  ctermfg=7 ctermbg=237 guifg=LightGrey guibg=#3a4046
+
+hi NonText ctermfg=239 guifg=#504945
 
 if !has('nvim')
     hi SpellBad cterm=undercurl gui=undercurl
