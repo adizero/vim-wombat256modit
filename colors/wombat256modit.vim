@@ -124,7 +124,7 @@ hi WinSeparator   ctermfg=241 ctermbg=233 guifg=#363646 guibg=#181820
 " hi! link NonText      LineNr
 
 hi GitSignsAdd      ctermfg=17      ctermbg=237     cterm=none  guifg=#2a0d6a guibg=#3a4046 gui=none
-hi GitSignsAddNr    ctermfg=19      ctermbg=232     cterm=none  guifg=#3a1daa guibg=#080808 gui=none
+hi GitSignsAddNr    ctermfg=19      ctermbg=232     cterm=none  guifg=#4a2dda guibg=#080808 gui=none
 hi GitSignsDelete       ctermfg=167      ctermbg=237     cterm=none  guifg=#c34043 guibg=#3a4046 gui=none
 hi GitSignsDeleteNr     ctermfg=167      ctermbg=232     cterm=none  guifg=#c34043 guibg=#080808 gui=none
 hi GitSignsChange       ctermbg=237     cterm=none  guibg=#3a4046 gui=none
