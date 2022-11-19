@@ -141,6 +141,11 @@ hi DiagnosticSignWarn  ctermfg=3 ctermbg=237 guifg=Orange    guibg=#3a4046
 hi DiagnosticSignInfo  ctermfg=4 ctermbg=237 guifg=LightBlue guibg=#3a4046
 hi DiagnosticSignHint  ctermfg=7 ctermbg=237 guifg=LightGrey guibg=#3a4046
 
+hi link CocErrorHighlight   DiagnosticUnderlineError
+hi link CocWarningHighlight DiagnosticUnderlineWarn
+hi link CocInfoHighlight    DiagnosticUnderlineInfo
+hi link CocHintHighlight    DiagnosticUnderlineHint
+
 " floating error needs to be lighter shade because of the floating background
 hi DiagnosticFloatingError ctermfg=167 guifg=#fb302b
 
