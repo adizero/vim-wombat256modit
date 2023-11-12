@@ -151,6 +151,25 @@ hi DiagnosticSignWarn  ctermfg=3 ctermbg=232 guifg=Orange    guibg=#080808
 hi DiagnosticSignInfo  ctermfg=4 ctermbg=232 guifg=LightBlue guibg=#080808
 hi DiagnosticSignHint  ctermfg=7 ctermbg=232 guifg=LightGrey guibg=#080808
 
+" calculated from base colors using shades in:
+" https://htmlcolorcodes.com/color-picker
+" see also:
+" https://www.w3schools.com/colors/colors_shades.asp
+" hi DiagnosticVirtualTextError ctermfg=1 guifg=#ff0000
+" hi DiagnosticVirtualTextWarn ctermfg=3 guifg=#ff9d00
+" hi DiagnosticVirtualTextInfo ctermfg=4 guifg=#add8e6
+" hi DiagnosticVirtualTextHint ctermfg=7 guifg=#d3d3d3
+
+hi DiagnosticVirtualTextError ctermfg=1 guifg=#902020
+" hi DiagnosticVirtualTextWarn ctermfg=3 guifg=#9f4a10
+" hi DiagnosticVirtualTextWarn ctermfg=3 guifg=#9f5600
+" hi DiagnosticVirtualTextWarn ctermfg=3 guifg=#804500
+hi DiagnosticVirtualTextWarn ctermfg=3 guifg=#603b00
+" hi DiagnosticVirtualTextInfo ctermfg=4 guifg=#6C8790
+" hi DiagnosticVirtualTextInfo ctermfg=4 guifg=#566C73
+hi DiagnosticVirtualTextInfo ctermfg=4 guifg=#415156
+hi DiagnosticVirtualTextHint ctermfg=7 guifg=#4f4f4f
+
 hi link CocErrorHighlight   DiagnosticUnderlineError
 hi link CocWarningHighlight DiagnosticUnderlineWarn
 hi link CocInfoHighlight    DiagnosticUnderlineInfo
