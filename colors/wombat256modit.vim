@@ -200,6 +200,8 @@ if !has('nvim')
     endif
 else
     hi SignColumn ctermfg=103 ctermbg=232 guifg=#a0a8b0 guibg=#080808
+    " @markup.heading is used in treesitter (for example first line of gitcommit file)
+    hi @markup.heading ctermfg=230 cterm=bold guifg=#e3e0d7 gui=bold
 endif
 
 " vim:set ts=4 sw=4
