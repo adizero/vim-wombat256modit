@@ -114,10 +114,14 @@ endif
 hi! link FoldColumn     Folded
 hi! link CursorColumn   CursorLine
 hi! link VertSplit      StatusLineNC
-hi! link FloatBorder    StatusLineNC
 " hi NormalNC       ctermfg=241 ctermbg=233 guifg=#c8c093 guibg=#181820
 hi NormalNC       ctermfg=252 ctermbg=233 guifg=#e3e0d7 guibg=#181820
 hi WinSeparator   ctermfg=241 ctermbg=233 guifg=#363646 guibg=#181820
+
+" Float windows
+hi! link NormalFloat NormalNC
+" hi! link FloatBorder StatusLineNC
+hi! link FloatBorder Keyword
 
 " highlighting non-text with LineNr (black background does not always look good, disabled for now)
 " hi! link NonText      LineNr
