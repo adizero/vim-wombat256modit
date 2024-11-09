@@ -58,10 +58,24 @@ if v:version >= 700
 endif
 
 " Diff highlighting
-hi DiffAdd                      ctermbg=17                                      guibg=#2a0d6a
-hi DiffDelete   ctermfg=234     ctermbg=60      cterm=none      guifg=#242424   guibg=#3e3969   gui=none
-hi DiffText                     ctermbg=53      cterm=none                      guibg=#73186e   gui=none
-hi DiffChange                   ctermbg=237                                     guibg=#382a37
+if !has('nvim-0.10')
+    hi DiffAdd                      ctermbg=17                                      guibg=#2a0d6a
+    hi DiffDelete   ctermfg=234     ctermbg=60      cterm=none      guifg=#242424   guibg=#3e3969   gui=none
+    hi DiffText                     ctermbg=53      cterm=none                      guibg=#73186e   gui=none
+    hi DiffChange                   ctermbg=237                                     guibg=#382a37
+else
+    " old colors with bg only highlight (otherwise syntax highlighting breaks)
+    " hi DiffAdd ctermfg=none ctermbg=17 cterm=none guifg=none guibg=#2a0d6a gui=none
+    " hi DiffDelete ctermfg=none ctermbg=60 cterm=none guifg=none guibg=#3e3969 gui=none
+    " hi DiffText ctermfg=none ctermbg=53 cterm=none guifg=none guibg=#73186e gui=none
+    " hi DiffChange ctermfg=none ctermbg=237 cterm=none guifg=none guibg=#382a37 gui=none
+
+    " new colors with bg only highlight (otherwise syntax highlighting breaks)
+    hi DiffAdd ctermfg=none ctermbg=22 cterm=none guifg=none guibg=#2b3328 gui=none
+    hi DiffDelete ctermfg=none ctermbg=167 cterm=none guifg=none guibg=#53242b gui=none
+    hi DiffText ctermfg=none ctermbg=99 cterm=none guifg=none guibg=#49443c gui=none
+    hi DiffChange ctermfg=none ctermbg=17 cterm=none guifg=none guibg=#252535 gui=none
+endif
 
 "hi CursorIM
 "hi Directory
