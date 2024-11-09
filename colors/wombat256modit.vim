@@ -222,6 +222,8 @@ else
     " @markup.heading is used in treesitter (for example first line of gitcommit file)
     hi @markup.heading ctermfg=230 cterm=bold guifg=#e3e0d7 gui=bold
     hi @markup.link ctermfg=192 cterm=none guifg=#8fe982 gui=none
+    " add the Operator -> Statement link which is the default in Vim (e.g. used for C++ new/delete operators)
+    hi! link Operator Statement
 endif
 
 " vim:set ts=4 sw=4
