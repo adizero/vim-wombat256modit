@@ -224,6 +224,8 @@ else
     hi @markup.link ctermfg=192 cterm=none guifg=#8fe982 gui=none
     " add the Operator -> Statement link which is the default in Vim (e.g. used for C++ new/delete operators)
     hi! link Operator Statement
+    " highlight override/final type modifiers in C++ as keywords (instead of types in nvim)
+    hi! link @lsp.type.modifier.cpp Keyword
 endif
 
 " vim:set ts=4 sw=4
