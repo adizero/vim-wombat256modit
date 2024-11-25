@@ -228,6 +228,9 @@ else
     hi! link @lsp.type.modifier.cpp Keyword
     " add QuickFixLine -> CursorLine link
     hi! link QuickFixLine CursorLine
+    " add RenderMarkdownCode -> ColorColumn link (and use only background colors for colorcolumn)
+    hi ColorColumn ctermbg=238 guibg=#444444
+    hi! link RenderMarkdownCode ColorColumn
 endif
 
 " vim:set ts=4 sw=4
