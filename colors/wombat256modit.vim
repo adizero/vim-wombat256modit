@@ -233,6 +233,10 @@ else
     hi ColorColumn ctermbg=238 guibg=#444444
     hi! link RenderMarkdownCode ColorColumn
     hi LspParameter ctermfg=173 cterm=none guifg=#d7873f gui=none
+
+    hi LineNrAbove ctermfg=241 ctermbg=232 cterm=none guifg=#35312c guibg=#080808 gui=none
+    hi LineNrBelow ctermfg=241 ctermbg=232 cterm=none guifg=#35312c guibg=#080808 gui=none
+    hi LineNr ctermfg=241 ctermbg=232 cterm=none guifg=#857b6f guibg=#080808 gui=none
 endif
 
 " vim:set ts=4 sw=4
