@@ -219,6 +219,7 @@ if !has('nvim')
     endif
 else
     hi SignColumn ctermfg=103 ctermbg=232 guifg=#a0a8b0 guibg=#080808
+
     " @markup.heading is used in treesitter (for example first line of gitcommit file)
     hi @markup.heading ctermfg=230 cterm=bold guifg=#e3e0d7 gui=bold
     hi @markup.link ctermfg=192 cterm=none guifg=#8fe982 gui=none
@@ -231,6 +232,7 @@ else
     " add RenderMarkdownCode -> ColorColumn link (and use only background colors for colorcolumn)
     hi ColorColumn ctermbg=238 guibg=#444444
     hi! link RenderMarkdownCode ColorColumn
+    hi LspParameter ctermfg=173 cterm=none guifg=#d7873f gui=none
 endif
 
 " vim:set ts=4 sw=4
